@@ -9,9 +9,9 @@ category1 = Category.create(title: 'Frontend')
 category2 = Category.create(title: 'Backend')
 category3 = Category.create(title: 'Mobile')
 
-user1 = User.create(name: 'user1', password: 'password1')
-user2 = User.create(name: 'user2', password: 'password2')
-user3 = User.create(name: 'user3', password: 'password3')
+user1 = User.create(name: 'user1', password: 'password1', email: 'user1@email.com')
+user2 = User.create(name: 'user2', password: 'password2', email: 'user2@email.com')
+user3 = User.create(name: 'user3', password: 'password3', email: 'user3@email.com')
 
 
 test1 = Test.create(title: 'HTML',  level: 1, category_id: category1.id, author_id: user1.id)
@@ -25,8 +25,8 @@ test_all = [test1, test2, test3, test4, test5]
 4.times do |i|
   test_all.each do |test|
     question = Question.create(body: "Question#{i+1}", test_id: test.id)
-    Answer.create(correct: true, question_id: question.id)
-    Answer.create(question_id: question.id)
+    Answer.create(body: 'true', correct: true, question_id: question.id)
+    Answer.create(body: 'false', question_id: question.id)
   end
 end
 

@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_213807) do
+ActiveRecord::Schema.define(version: 2020_03_15_204714) do
 
   create_table "answers", force: :cascade do |t|
     t.boolean "correct", default: false
     t.integer "question_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "body", null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
@@ -60,6 +61,7 @@ ActiveRecord::Schema.define(version: 2020_03_09_213807) do
     t.string "password", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email", null: false
   end
 
   add_foreign_key "answers", "questions"
