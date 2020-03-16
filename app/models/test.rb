@@ -14,6 +14,6 @@ class Test < ApplicationRecord
   scope :all_by_category, -> (category) { joins(:category).where(categories: { title: category }) }
 
   def list_all_by_category(category)
-    all_by_category(category).order('tests.id DESC').pluck(:title)
+    all_by_category(category).order(title: :desc).pluck(:title)
   end
 end
