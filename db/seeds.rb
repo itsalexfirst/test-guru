@@ -24,7 +24,7 @@ test_all = [test1, test2, test3, test4, test5]
 
 4.times do |i|
   test_all.each do |test|
-    question = Question.create(body: "Question#{i+1}", test_id: test.id)
+    question = Question.create(body: "Question#{i+1}.#{('a'..'z').to_a.shuffle[0,8].join}.#{test.id}", test_id: test.id)
     Answer.create(body: 'true', correct: true, question_id: question.id)
     Answer.create(body: 'false', question_id: question.id)
   end
