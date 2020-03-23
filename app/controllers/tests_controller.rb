@@ -36,6 +36,13 @@ class TestsController < ApplicationController
     end
   end
 
+  def destroy
+    @test = Test.find(params[:id])
+
+    @test.destroy
+    redirect_to tests_path
+  end
+
   private
 
   def find_test
