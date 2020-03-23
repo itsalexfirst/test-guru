@@ -1,15 +1,9 @@
 class QuestionsController < ApplicationController
-  before_action :find_question, only: [:show, :destroy]
+  before_action :find_question, only: [:show, :destroy, :edit, :update]
   before_action :find_test, only: [:index, :create, :new]
 
- rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
-
-
   def index
-    render inline:
-    "<% @test.questions.each do |question| %>
-    <p><%= question.body %></p>
-    <% end %>"
+    redirect_to @test
   end
 
   def new
@@ -17,23 +11,32 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    #result = ["Class: {params.class}, parameters: #{params.inspect}]"]
-    #render plain: result.join("\n")
     render inline: "<p><%= @question.body %></p>"
   end
 
   def create
-    question = @test.questions.new(test_params)
+    @question = @test.questions.new(test_params)
 
-    if question.save
-      render plain: 'created'
+    if @question.save
+      redirect_to @test
     else
       render :new
     end
   end
 
+  def update
+    @test = @question.test
+    if @question.update(test_params)
+      redirect_to @test
+    else
+      render :edit
+    end
+  end
+
   def destroy
+    @test = @question.test
     @question.destroy
+    redirect_to @test
   end
 
   private
@@ -48,9 +51,5 @@ class QuestionsController < ApplicationController
 
   def test_params
     params.require(:question).permit(:body)
-  end
-
-  def rescue_with_question_not_found
-    render plain: 'question not found'
   end
 end
