@@ -18,11 +18,10 @@
     <th colspan='3'>Actions</th>
   </tr>
 
-  <% @test.questions.each do |question| %>
-    <tr>
-      <%= render question %>
-    </tr>
-  <% end %>
+  <tr>
+    <%= render @test.questions %>
+  </tr>
+
 </table>
 
 <%= link_to 'Edit', edit_test_path(@test) %> |
