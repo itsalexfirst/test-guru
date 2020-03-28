@@ -9,6 +9,6 @@ class Answer < ApplicationRecord
   private
 
   def validate_numbers
-    errors.add(:question, 'can`t contain more answers') if question.answers.size >=4
+    errors.add(:question, 'can`t contain more answers') if question.answers.size > 4  #не оправдалось поведение
   end
 end
