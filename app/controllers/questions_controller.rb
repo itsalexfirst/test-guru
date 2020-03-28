@@ -1,39 +1,42 @@
 class QuestionsController < ApplicationController
-  before_action :find_question, only: [:show, :destroy]
-  before_action :find_test, only: [:index, :create, :new]
+  before_action :find_question, only: [:show, :destroy, :edit, :update]
+  before_action :find_test, only: [:create, :new]
 
- rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
-
-
-  def index
-    render inline:
-    "<% @test.questions.each do |question| %>
-    <p><%= question.body %></p>
-    <% end %>"
-  end
+   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def new
-
+    @question = @test.questions.new
   end
 
   def show
-    #result = ["Class: {params.class}, parameters: #{params.inspect}]"]
-    #render plain: result.join("\n")
-    render inline: "<p><%= @question.body %></p>"
+    @test = @question.test
   end
 
   def create
-    question = @test.questions.new(test_params)
+    @question = @test.questions.new(question_params)
 
-    if question.save
-      render plain: 'created'
+    if @question.save
+      redirect_to @test
     else
       render :new
     end
   end
 
+  def edit; end
+
+  def update
+    @test = @question.test
+    if @question.update(question_params)
+      redirect_to @test
+    else
+      render :edit
+    end
+  end
+
   def destroy
+    @test = @question.test
     @question.destroy
+    redirect_to @test
   end
 
   private
@@ -46,7 +49,7 @@ class QuestionsController < ApplicationController
     @test = Test.find(params[:test_id])
   end
 
-  def test_params
+  def question_params
     params.require(:question).permit(:body)
   end
 
