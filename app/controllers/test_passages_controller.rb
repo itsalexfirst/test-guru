@@ -3,7 +3,11 @@ class TestPassagesController < ApplicationController
   before_action :set_test_passage, only: %i[show result update]
 
   def show
-
+    if @test_passage.completed?
+      redirect_to result_test_passage_path(@test_passage)
+    else
+      render :show
+    end
   end
 
   def result
