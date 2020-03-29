@@ -1,9 +1,11 @@
 class TestPassage < ApplicationRecord
+  SUCCES_LIMIT = 85
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
-  before_validation :before_validation_set_question
+  before_validation :before_validation_find_question
 
   def completed?
     current_question.nil?
@@ -26,7 +28,7 @@ class TestPassage < ApplicationRecord
   end
 
   def success?
-    success_rate >= 85
+    success_rate >= SUCCES_LIMIT
   end
 
   def current_question_number
@@ -35,7 +37,7 @@ class TestPassage < ApplicationRecord
 
   private
 
-  def before_validation_set_question
+  def before_validation_find_question
     self.current_question = (new_record? ? test.questions.first : next_question)
   end
 
