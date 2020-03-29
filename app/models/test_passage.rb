@@ -29,6 +29,10 @@ class TestPassage < ApplicationRecord
     success_rate >= 85
   end
 
+  def current_question_number
+    number_of_questions - questions_order.count
+  end
+
   private
 
   def before_validation_set_question
@@ -46,6 +50,10 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
-    test.questions.order(:id).where('id > ?', current_question.id).first
+    questions_order.first
+  end
+
+  def questions_order
+    test.questions.order(:id).where('id > ?', current_question.id)
   end
 end

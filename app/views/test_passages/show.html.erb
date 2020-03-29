@@ -1,4 +1,6 @@
 <h1>Passing the <%= @test_passage.test.title %> Test</h1>
+<h2>Question number <%= @test_passage.current_question_number %>
+  of <%= @test_passage.number_of_questions %></h2>
 
 <b>
   <%= @test_passage.current_question.body %>
