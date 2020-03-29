@@ -17,6 +17,18 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def success_rate
+    correct_questions.to_f / number_of_questions * 100
+  end
+
+  def number_of_questions
+    test.questions.count
+  end
+
+  def success?
+    success_rate >= 85
+  end
+
   private
 
   def before_validation_set_question
