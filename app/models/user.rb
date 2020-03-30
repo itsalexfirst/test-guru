@@ -4,6 +4,8 @@ class User < ApplicationRecord
 
   include Auth
 
+  validates :email, presence: true, uniqueness: :true, format: { with: URI::MailTo::EMAIL_REGEXP }
+
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :added_tests , class_name: 'Test', foreign_key: 'author_id'
