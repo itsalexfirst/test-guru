@@ -9,7 +9,7 @@
 </p>
 
 <p>
-  <%= link_to 'New Question', new_test_question_path(@test) %>
+  <%= link_to 'New Question', new_admin_test_question_path(@test) %>
 </p>
 
 <table>
@@ -19,8 +19,8 @@
   </tr>
 
   <tr>
-    <% # = render @test.questions %>
-    <%= render partial: 'questions/question', collection: @test.questions %>
+    <%= render @test.questions %>
+    <% # = render partial: 'questions/question', collection: @test.questions %>
   </tr>
 
 </table>
