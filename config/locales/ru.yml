@@ -31,6 +31,10 @@ ru:
         one: "Обнаружено %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
 
+  tests_mailer:
+    completed_test:
+      subject: "Тест пройден"
+
   admin:
     tests:
       index:
