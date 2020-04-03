@@ -37,12 +37,23 @@ en:
       test:
         create: "Create Test"
         update: "Update Test"
+      question:
+        create: "Create Question"
+        update: "Update Question"
+      answer:
+        create: "Create Answer"
+        update: "Update Answer"
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"
         author_id: "Author"
+      question:
+        body: "Body"
+      answer:
+        body: "Body"
+        correct: "Correct"
 
   admin:
     tests:
@@ -74,15 +85,56 @@ en:
         header: "Edit %{title} test"
         back: "Back"
       create:
-
         success: "Test was successfully created"
 
+    questions:
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?"
+      show:
+        header: "Answer from %{title} Test"
+        answers: "Answers"
+        new_answer: "New Answer"
+        edit: "Edit"
+        back: "Back"
+      new:
+        header: "!!!"
+        back: "Back"
+      edit:
+        header: "!!!"
+        back: "Back"
+      create:
+        success: "Answer successfully created"
+
+    answers:
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?"
+      show:
+        header: "Answer"
+        answer: "Answer"
+        correct: "Correct"
+        back: "Back"
+      new:
+        header: "New Answer"
+        back: "Back"
+      edit:
+        header: "Edit"
+        back: "Back"
+      create:
+        success: "Answer successfully created"
+
+
   tests:
-      index:
-        header: "Test"
-        title: "Title"
-        level: "Level"
-        questions: "Questions"
-        actions: "Action"
-      test:
-        start: "Start"
+    index:
+      header: "Test"
+      title: "Title"
+      level: "Level"
+      questions: "Questions"
+      actions: "Action"
+    test:
+      start: "Start"

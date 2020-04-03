@@ -6,12 +6,23 @@ ru:
       test:
         create: "Создать тест"
         update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
     label:
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
         author_id: "Автор"
+      question:
+        body: "Содержание"
+      answer:
+        body: "Содержание"
+        correct: "Верно"
 
   admin:
     tests:
@@ -43,8 +54,48 @@ ru:
         header: "Редактировать %{title} тест"
         back: "Назад"
       create:
-
         success: "Тест успешно создан"
+
+    questions:
+      question:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        sure: "Вы уверены?"
+      show:
+        header: "Просмотр вопроса из %{title} теста"
+        answers: "Ответы"
+        new_answer: "Создать новый ответ"
+        edit: "Редактировать"
+        back: "Назад"
+      new:
+        header: "???"
+        back: "Назад"
+      edit:
+        header: "???"
+        back: "Назад"
+      create:
+        success: "Вопрос успешно создан"
+
+    answers:
+      answer:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        sure: "Вы уверены?"
+      show:
+        header: "Просмотр ответа на вопрос"
+        answer: "Ответ"
+        correct: "Верно"
+        back: "Назад"
+      new:
+        header: "Новый ответ"
+        back: "Назад"
+      edit:
+        header: "Редактировать ответ"
+        back: "Назад"
+      create:
+        success: "Ответ успешно создан"
 
   tests:
     index:
