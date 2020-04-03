@@ -23,6 +23,13 @@ ru:
       answer:
         body: "Содержание"
         correct: "Верно"
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
 
   admin:
     tests:
@@ -106,3 +113,12 @@ ru:
       actions: "Действие"
     test:
       start: "Начать прохождение"
+
+  test_passages:
+    show:
+      header: "Прохождение %{title} теста"
+      question: "Вопрос номер %{number} из %{numbers}"
+      next: "Дальше"
+    result:
+      header: "Тест %{title} успешно завершён"
+      back: "Назад"

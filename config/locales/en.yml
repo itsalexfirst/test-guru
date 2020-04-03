@@ -55,6 +55,12 @@ en:
         body: "Body"
         correct: "Correct"
 
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
   admin:
     tests:
       index:
@@ -138,3 +144,12 @@ en:
       actions: "Action"
     test:
       start: "Start"
+
+  test_passages:
+    show:
+      header: "Passing the %{title} Test"
+      question: "Question number %{number} of %{numbers}"
+      next: "Next"
+    result:
+      header: "The %{title} Test was completed"
+      back: "Back"
