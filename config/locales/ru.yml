@@ -5,3 +5,9 @@ ru:
     index:
       header: "Доступные тесты"
 
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан"
+      index:
+        header: "Доступные тесты"
