@@ -1,0 +1,128 @@
+ru:
+  hello: "Привет мир"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+        author_id: "Автор"
+      question:
+        body: "Содержание"
+      answer:
+        body: "Содержание"
+        correct: "Верно"
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests_mailer:
+    completed_test:
+      subject: "Тест пройден"
+
+  admin:
+    tests:
+      index:
+        header: "Доступные тесты"
+        new: "Создать тест"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Выбрать действие"
+      test:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        sure: "Вы уверены?"
+      show:
+        header: "Просмотр теста"
+        title: "Название"
+        level: "Уровень"
+        new_question: "Создать вопрос"
+        questions: "Вопросы"
+        actions: "Выбрать действие"
+        edit: "Редактировать"
+        back: "Назад"
+      new:
+        header: "Создать тест"
+        back: "Назад"
+      edit:
+        header: "Редактировать %{title} тест"
+        back: "Назад"
+      create:
+        success: "Тест успешно создан"
+
+    questions:
+      question:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        sure: "Вы уверены?"
+      show:
+        header: "Просмотр вопроса из %{title} теста"
+        answers: "Ответы"
+        new_answer: "Создать новый ответ"
+        edit: "Редактировать"
+        back: "Назад"
+      new:
+        header: "???"
+        back: "Назад"
+      edit:
+        header: "???"
+        back: "Назад"
+      create:
+        success: "Вопрос успешно создан"
+
+    answers:
+      answer:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        sure: "Вы уверены?"
+      show:
+        header: "Просмотр ответа на вопрос"
+        answer: "Ответ"
+        correct: "Верно"
+        back: "Назад"
+      new:
+        header: "Новый ответ"
+        back: "Назад"
+      edit:
+        header: "Редактировать ответ"
+        back: "Назад"
+      create:
+        success: "Ответ успешно создан"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: "Действие"
+    test:
+      start: "Начать прохождение"
+
+  test_passages:
+    show:
+      header: "Прохождение %{title} теста"
+      question: "Вопрос номер %{number} из %{numbers}"
+      next: "Дальше"
+    result:
+      header: "Тест %{title} успешно завершён"
+      back: "Назад"

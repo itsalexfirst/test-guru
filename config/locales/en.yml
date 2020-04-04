@@ -31,3 +31,129 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+      question:
+        create: "Create Question"
+        update: "Update Question"
+      answer:
+        create: "Create Answer"
+        update: "Update Answer"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+        author_id: "Author"
+      question:
+        body: "Body"
+      answer:
+        body: "Body"
+        correct: "Correct"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the Test"
+
+  admin:
+    tests:
+      index:
+        header: "Tricky Tests"
+        new: "New Test"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        actions: "Actions"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?"
+      show:
+        header: "Test"
+        title: "Title"
+        level: "Level"
+        new_question: "New question"
+        questions: "Questions"
+        actions: "Actions"
+        edit: "Edit"
+        back: "Back"
+      new:
+        header: "Create New Test"
+        back: "Back"
+      edit:
+        header: "Edit %{title} test"
+        back: "Back"
+      create:
+        success: "Test was successfully created"
+
+    questions:
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?"
+      show:
+        header: "Answer from %{title} Test"
+        answers: "Answers"
+        new_answer: "New Answer"
+        edit: "Edit"
+        back: "Back"
+      new:
+        header: "!!!"
+        back: "Back"
+      edit:
+        header: "!!!"
+        back: "Back"
+      create:
+        success: "Answer successfully created"
+
+    answers:
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?"
+      show:
+        header: "Answer"
+        answer: "Answer"
+        correct: "Correct"
+        back: "Back"
+      new:
+        header: "New Answer"
+        back: "Back"
+      edit:
+        header: "Edit"
+        back: "Back"
+      create:
+        success: "Answer successfully created"
+
+
+  tests:
+    index:
+      header: "Test"
+      title: "Title"
+      level: "Level"
+      questions: "Questions"
+      actions: "Action"
+    test:
+      start: "Start"
+
+  test_passages:
+    show:
+      header: "Passing the %{title} Test"
+      question: "Question number %{number} of %{numbers}"
+      next: "Next"
+    result:
+      header: "The %{title} Test was completed"
+      back: "Back"
