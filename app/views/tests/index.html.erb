@@ -1,12 +1,13 @@
-<h1><%= t('.header')%></h1>
+<h1 class="text text-center"><%= t('.header')%></h1>
 
-<table>
-  <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.questions') %></th>
-    <th><%= t('.actions') %></th>
-  </tr>
-
+<table class="table table-striped text-center">
+  <thead>
+    <tr>
+      <th><%= t('.title') %></th>
+      <th><%= t('.level') %></th>
+      <th><%= t('.questions') %></th>
+      <th><%= t('.actions') %></th>
+    </tr>
+  </thead>
   <%= render @tests %>
 </table>

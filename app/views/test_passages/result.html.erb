@@ -1,13 +1,13 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <% if @test_passage.success? %>
-  <p style="color:#00A000"> Passed
+  <p class="text-success"> Passed
   <%= @test_passage.success_rate %>
   </p>
 <% else %>
-  <p style="color:#A00000"> Failed
+  <p class="text-danger"> Failed
   <%= @test_passage.success_rate %>
   </p>
 <% end %>
 
-<%= link_to t('.back'), tests_path %>
+<%= link_to t('.back'), tests_path, class: 'btn btn-primary' %>

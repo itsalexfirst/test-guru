@@ -1,4 +1,7 @@
 module ApplicationHelper
+
+  ALERTS = {alert: 'danger', notice: 'primary'}
+
   def current_year
     Time.current.year
   end
@@ -9,7 +12,8 @@ module ApplicationHelper
 
   def flash_message
     flash.map do |key, message|
-      content_tag :p, message, class: "flash #{key}"
+      alert = ALERTS[key.to_sym]
+      content_tag :p, message, class: "alert alert-#{alert}"
     end.join().html_safe
   end
 end
