@@ -36,6 +36,10 @@ gem 'devise-i18n', '~> 1.9.0'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.4.1'
 
+#Networking
+
+gem 'faraday'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
