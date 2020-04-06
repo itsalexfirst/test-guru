@@ -39,6 +39,7 @@ gem 'bootstrap', '~> 4.4.1'
 #Networking
 
 gem 'faraday'
+gem 'octokit', '~> 4.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -57,6 +58,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   gem 'letter_opener'
+  gem 'dotenv-rails'
 end
 
 group :test do
