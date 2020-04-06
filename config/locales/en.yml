@@ -157,3 +157,6 @@ en:
     result:
       header: "The %{title} Test was completed"
       back: "Back"
+    gist:
+      success: "Gist creates"
+      failure: "An error occured while saving gist"
