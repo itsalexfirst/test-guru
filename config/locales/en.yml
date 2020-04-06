@@ -158,5 +158,5 @@ en:
       header: "The %{title} Test was completed"
       back: "Back"
     gist:
-      success: "Gist creates"
+      success: "%{gist_link} created"
       failure: "An error occured while saving gist"

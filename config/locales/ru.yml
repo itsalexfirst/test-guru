@@ -127,5 +127,5 @@ ru:
       header: "Тест %{title} успешно завершён"
       back: "Назад"
     gist:
-      success: "Gist сохранён"
+      success: "%{gist_link} сохранён"
       failure: "Во время сохранения gist произошла ошибка"

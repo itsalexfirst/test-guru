@@ -13,7 +13,7 @@ module ApplicationHelper
   def flash_message
     flash.map do |key, message|
       alert = ALERTS[key.to_sym]
-      content_tag :p, message, class: "alert alert-#{alert}"
+      content_tag :p, message.html_safe, class: "alert alert-#{alert}"
     end.join().html_safe
   end
 end
