@@ -107,6 +107,12 @@ ru:
         back: "Назад"
       create:
         success: "Ответ успешно создан"
+    gists:
+      index:
+        header: "Gists"
+        title: "Вопросы"
+        gist: "Ссылка Gist"
+        email: "Email пользователя"
 
   tests:
     index:

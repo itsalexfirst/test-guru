@@ -138,6 +138,13 @@ en:
       create:
         success: "Answer successfully created"
 
+    gists:
+      index:
+        header: "All Gists"
+        title: "Questions"
+        gist: "Link to Gist"
+        email: "User Email"
+
 
   tests:
     index:

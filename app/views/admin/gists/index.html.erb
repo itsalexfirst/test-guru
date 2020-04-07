@@ -1,0 +1,13 @@
+<h1 class="text text-center"><%= t('.header')%></h1>
+
+<table class="table table-striped text-center">
+  <thead>
+    <tr>
+      <th><%= t('.title') %></th>
+      <th><%= t('.gist') %></th>
+      <th><%= t('.email') %></th>
+    </tr>
+  </thead>
+
+  <%= render @gists %>
+</table>
