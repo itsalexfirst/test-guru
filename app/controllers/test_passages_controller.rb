@@ -24,9 +24,10 @@ class TestPassagesController < ApplicationController
   end
 
   def gist
-    result = GistQuestionService.new(@test_passage.current_question).call
+    gist_question_service = GistQuestionService.new(@test_passage.current_question)
+    result = gist_question_service.call
 
-    flash_options = if result.is_a?(Sawyer::Resource)
+    flash_options = if gist_question_service.success?
       save_gist(result.html_url)
       { notice: t('.success', gist_link: view_context.link_to('gist', result.html_url)) }
     else
