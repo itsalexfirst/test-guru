@@ -107,6 +107,12 @@ ru:
         back: "Назад"
       create:
         success: "Ответ успешно создан"
+    gists:
+      index:
+        header: "Gists"
+        title: "Вопросы"
+        gist: "Ссылка Gist"
+        email: "Email пользователя"
 
   tests:
     index:
@@ -126,3 +132,9 @@ ru:
     result:
       header: "Тест %{title} успешно завершён"
       back: "Назад"
+    gist:
+      success: "%{gist_link} сохранён"
+      failure: "Во время сохранения gist произошла ошибка"
+
+    gist_question_service:
+      description: "Вопрос о тесте %{title} из TestGuru"
