@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("packs/utilities/sorting")
 require("packs/utilities/password_confirmation")
+require("packs/utilities/form_inline")
 
 
 

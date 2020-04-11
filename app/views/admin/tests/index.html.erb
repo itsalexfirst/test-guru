@@ -4,6 +4,8 @@
   <%= link_to t('.new'), new_admin_test_path, class: 'btn btn-success' %>
 </p>
 
+<%= render 'shared/errors', resource: @test %>
+
 <table class="table table-striped text-center">
   <thead>
     <tr>
