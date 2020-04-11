@@ -1,4 +1,10 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<h1>
+  <%= t('.header', title: @test_passage.test.title) %>
+  <div style="width: 100%; background-color: #ddd">
+    <div style="width: <%= @test_passage.current_question_number * 100 / @test_passage.number_of_questions  %>%;
+         background-color: #4CAF50"> <%= @test_passage.current_question_number * 100 / @test_passage.number_of_questions  %>% </div>
+  </div>
+</h1>
 <h2>
   <%=  t('.question', number: @test_passage.current_question_number,
                       numbers: @test_passage.number_of_questions) %>
