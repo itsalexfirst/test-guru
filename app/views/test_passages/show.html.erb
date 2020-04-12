@@ -1,8 +1,12 @@
 <h1>
   <%= t('.header', title: @test_passage.test.title) %>
-  <div style="width: 100%; background-color: #ddd">
-    <div style="width: <%= @test_passage.current_question_number * 100 / @test_passage.number_of_questions  %>%;
-         background-color: #4CAF50"> <%= @test_passage.current_question_number * 100 / @test_passage.number_of_questions  %>% </div>
+
+  <div class="progress" style="height: 40px">
+    <%= content_tag :div, class: 'progress-bar bg-success',
+                     role: 'progressbar',
+                     data: { total_questions: @test_passage.number_of_questions,
+                     question_number: @test_passage.current_question_number } do %>
+    <% end %>
   </div>
 </h1>
 <h2>
