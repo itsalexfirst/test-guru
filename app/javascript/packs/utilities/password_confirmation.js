@@ -1,6 +1,5 @@
 document.addEventListener('turbolinks:load', function() {
   var passwordConfirm = document.querySelector('#user_password_confirmation')
-  console.log(passwordConfirm)
   if (passwordConfirm) { passwordConfirm.addEventListener('input', passwordCompare) }
 })
 

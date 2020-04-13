@@ -66,6 +66,7 @@ ru:
         back: "Назад"
       create:
         success: "Тест успешно создан"
+      submit: "OK"
 
     questions:
       question:

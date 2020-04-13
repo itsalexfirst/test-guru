@@ -96,6 +96,8 @@ en:
         back: "Back"
       create:
         success: "Test was successfully created"
+      form_inline:
+        submit: "OK"
 
     questions:
       question:

@@ -9,8 +9,8 @@ require("@rails/activestorage").start()
 require("channels")
 require("packs/utilities/sorting")
 require("packs/utilities/password_confirmation")
-
-
+require("packs/utilities/form_inline")
+require("packs/utilities/progress_bar")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
