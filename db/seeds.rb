@@ -9,7 +9,7 @@ category1 = Category.create(title: 'Frontend')
 category2 = Category.create(title: 'Backend')
 category3 = Category.create(title: 'Mobile')
 
-user1 = User.create(name: 'user1', password: 'password1', email: 'user1@email.com')
+user1 = User.create(name: 'Admin', password: 'password1', email: 'user1@email.com', type: 'Admin')
 user2 = User.create(name: 'user2', password: 'password2', email: 'user2@email.com')
 user3 = User.create(name: 'user3', password: 'password3', email: 'user3@email.com')
 
