@@ -172,3 +172,11 @@ en:
 
   gist_question_service:
     description: "A question about %{title} from TestGuru"
+
+  feedback:
+    new:
+      header: "Enter message:"
+    form:
+      submit: "Send"
+    create:
+      success: "Feedback was successfully created"

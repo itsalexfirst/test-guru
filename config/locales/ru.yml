@@ -139,3 +139,11 @@ ru:
 
     gist_question_service:
       description: "Вопрос о тесте %{title} из TestGuru"
+
+    feedback:
+    new:
+      header: "Введите сообщение:"
+    form:
+      submit: "Отправить"
+    create:
+      success: "Сообщение отправлено"
