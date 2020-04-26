@@ -20,7 +20,7 @@ class TestPassage < ApplicationRecord
   end
 
   def success_rate
-    correct_questions.to_f / number_of_questions * 100
+    number_of_questions == 0 ? 100 : number_of_questions ? correct_questions.to_f / number_of_questions * 100 : 100
   end
 
   def number_of_questions
@@ -42,9 +42,8 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
-    correct_answers_count = correct_answers.count
-    (correct_answers_count == correct_answers.where(id: answer_ids).count) &&
-    correct_answers_count == answer_ids.count
+    answer_ids ||= []
+    correct_answers.ids.sort == answer_ids.map(&:to_i).sort
   end
 
   def correct_answers
