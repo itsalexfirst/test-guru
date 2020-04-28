@@ -1,0 +1,16 @@
+<h1 class="text text-center"><%= t('.header')%></h1>
+
+<%= render 'shared/errors', resource: @badge %>
+
+<table class="table table-striped text-center">
+  <thead>
+    <tr>
+      <th><%= t('.title') %></th>
+      <th><%= t('.rule_name') %></th>
+      <th><%= t('.rule_value') %></th>
+      <th><%= t('.picture') %></th>
+    </tr>
+  </thead>
+
+  <%= render @badges %>
+</table>
