@@ -1,0 +1,26 @@
+<%= form_with model: [:admin, @badge], local: true do |form| %>
+  <%= render 'shared/errors', resource: @badge %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :rule_name %><br>
+    <%= form.text_field :rule_name %>
+  </p>
+
+  <p>
+    <%= form.label :rule_value %><br>
+    <%= form.text_field :rule_value %>
+  </p>
+
+   <p>
+    <%= form.label :picture %><br>
+    <%= form.text_field :picture %>
+  </p>
+
+
+  <p><%= form.submit %></p>
+<% end %>
