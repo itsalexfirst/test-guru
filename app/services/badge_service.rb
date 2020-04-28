@@ -8,22 +8,23 @@ class BadgeService
 
   def call
     Badge.all.each do |badge|
-      @user.badges.push(badge) if send("#{badge.rule_name}?", badge.rule_value)
+      @user.badges.push(badge) if send("#{badge.rule_name}?", badge)
     end
   end
 
   private
 
-  def category?(id)
+  def category?(badge)
+    return if @user.badges.include?(badge)
+    (Test.all_by_category(badge.rule_value).ids - @user.test_passages.select{ |x| x.success? }.map(&:test_id)).empty?
+  end
+
+  def level?(badge)
 
   end
 
-  def level?(level)
-
-  end
-
-  def attempt?(number)
-    @user.tests.where(id: @test.id).count == number.to_i
+  def attempt?(badge)
+    @user.tests.where(id: @test.id).count == badge.rule_value.to_i
   end
 
 end
