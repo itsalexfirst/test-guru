@@ -1,5 +1,5 @@
 class TestPassage < ApplicationRecord
-  SUCCES_LIMIT = 85
+  SUCCESS_LIMIT = 85
 
   belongs_to :user
   belongs_to :test
@@ -28,7 +28,7 @@ class TestPassage < ApplicationRecord
   end
 
   def success?
-    success_rate >= SUCCES_LIMIT
+    success_rate >= SUCCESS_LIMIT
   end
 
   def current_question_number

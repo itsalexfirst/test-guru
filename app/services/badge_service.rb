@@ -16,19 +16,19 @@ class BadgeService
 
   def category?(badge)
     return if @user.badges.include?(badge)
-    (Test.all_by_category(badge.rule_value).ids - success_passed_tests).empty?
+    (Test.all_by_category(badge.rule_value).ids - success_passed_tests_ids).empty?
   end
 
   def level?(badge)
     return if @user.badges.include?(badge)
-    (Test.all_by_level(badge.rule_value.to_i).ids - success_passed_tests).empty?
+    (Test.all_by_level(badge.rule_value.to_i).ids - success_passed_tests_ids).empty?
   end
 
   def attempt?(badge)
     @user.tests.where(id: @test.id).count == badge.rule_value.to_i
   end
 
-  def success_passed_tests_id
-    @user.test_passages.select{ |x| x.success? }.map(&:test_id)
+  def success_passed_tests_ids
+    @user.test_passages.where(success: true).pluck(:test_id)
   end
 end
