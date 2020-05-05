@@ -15,11 +15,10 @@ class TestPassagesController < ApplicationController
   def update
     if @test_passage.timer? && @test_passage.time_is_over?
       @test_passage.current_question = nil
-      update_afteraction
     else
       @test_passage.accept!(params[:answer_ids])
-      update_afteraction
     end
+    update_afteraction
   end
 
   def update_afteraction
