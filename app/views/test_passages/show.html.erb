@@ -1,5 +1,9 @@
 <h1>
   <%= t('.header', title: @test_passage.test.title) %>
+  <% if @test_passage.timer? %>
+    <%= content_tag :div, '', class: 'timer',
+                     data: { timer:  @test_passage.time_left } %>
+  <% end %>
 
   <div class="progress" style="height: 40px">
     <%= content_tag :div, class: 'progress-bar bg-success',

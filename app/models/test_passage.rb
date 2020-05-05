@@ -47,6 +47,10 @@ class TestPassage < ApplicationRecord
     expired_at < Time.now
   end
 
+  def time_left
+    expired_at - Time.now
+  end
+
   private
 
   def before_validation_find_question
