@@ -35,6 +35,18 @@ class TestPassage < ApplicationRecord
     number_of_questions - questions_order.count
   end
 
+  def timer?
+    test.timer > 0
+  end
+
+  def expired_at
+    created_at + test.timer.minutes
+  end
+
+  def time_is_over?
+    expired_at < Time.now
+  end
+
   private
 
   def before_validation_find_question
