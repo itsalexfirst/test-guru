@@ -13,8 +13,15 @@ class TestPassagesController < ApplicationController
   def result; end
 
   def update
-    @test_passage.accept!(params[:answer_ids])
+    if @test_passage.timer? && @test_passage.time_is_over?
+      @test_passage.current_question = nil
+    else
+      @test_passage.accept!(params[:answer_ids])
+    end
+    update_afteraction
+  end
 
+  def update_afteraction
     if @test_passage.completed?
       success! if @test_passage.success?
       TestsMailer.completed_test(@test_passage).deliver_now
